@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+<!-- Main component for a primary marketing message or call to action -->
+{% block headTitle %}Welcome |{% endblock %}
+
+<style>
+{% block style %}
+.jumbotron {
+  background-color: #9DD5EF;
+}
+
+{% endblock %}
+</style>
+
+{% block jumbotron %}
+<div class="jumbotron">
+  <div class="container">
+<div class="row">
+  <div class="col-sm-6">
+        <h1>James is learning Django</h1>
+        <p>This landing project is helping me learn HTML/CSS and Django.</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="#" role="button">View navbar docs &raquo;</a>
+        </p>
+  </div>
+  <div class="col-sm-6">
+    <iframe class ="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/XVplgmhKkcA" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class ="col-sm-3 pull-right ">
+        <p class="lead text-align-center">{{title}}</p>
+        <form method='POST' action=''>{% csrf_token %}
+          {{ form|crispy }}
+          <input class ='btn btn-primary' type='submit' value='Sign Up'>
+        </form>
+    </div>
+    <div class='col-sm-3'>
+      <p class="lead text-align-center">Trying for Photo sharing
+        <br>
+        <i style="color: #9DD5EF; "class="fa fa-camera fa-5x"></i>
+      </p>
+    </div>
+    <div class='col-sm-3'>
+      <p class="lead text-align-center">I will have a blog here too!
+        <br>
+        <i style="color:#9DD5EF;" class="fa fa-commenting-o fa-5x"></i>
+      </p>
+
+    </div>
+    <div class='col-sm-3'>
+      <p class='lead text-align-center'>My code is on GitHub
+        <br>
+        <i class="fa fa-github fa-5x"></i>
+      </p>
+    </div>
+</div>
+{% endblock %}
