@@ -1,0 +1,2 @@
+# DjangoMVP
+DjangoMVP tutorial site
