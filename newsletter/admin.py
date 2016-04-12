@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .forms import SignUpForm
-from .models import SignUp
+from .models import SignUp, SearchLocation
 
 
 # Register your models here.
@@ -11,3 +11,4 @@ class SignUpAdmin(admin.ModelAdmin):
     #    model = SignUp
 
 admin.site.register(SignUp, SignUpAdmin)
+admin.site.register(SearchLocation)

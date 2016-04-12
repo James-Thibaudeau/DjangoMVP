@@ -3,9 +3,6 @@
 
 {% block content %}
 
-
-
-
 <div class ="row">
   <div class ='col-sm-6 col-sm-offset-3'>
     {% if title %}
@@ -14,13 +11,15 @@
 <form method='POST' action=''>{% csrf_token %}
   {{ form|crispy }}
   <input class="btn btn-default" type='submit' value='Submit' />
-  {% if location %}
+  {% if followers %}
   <div class ="row">
     <div class = "col-sm-6 col-sm-offset-3">
-      <p class="lead text-align-center">Coordinates of {{ city_name }}</p>
-  <p class="lead text-align-center">{{ location }}</p>
-</div>
-</div>
+      <p class="lead text-align-center"><small>{{ followers }}</small>
+        <img class="img-responsive" src = {{ image }}>
+      </p>
+
+    </div>
+  </div>
   {% endif %}
 </form>
 </div>

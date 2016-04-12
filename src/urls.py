@@ -24,6 +24,8 @@ urlpatterns = [
     url(r'^about/$', 'src.views.about', name='about'),
     url(r'^blog/$', 'src.views.blog', name='blog'),
     url(r'^thanks/$', 'src.views.thanks', name='thanks'),
+    url(r'^gps/$', 'src.views.gpsSearch', name='gpssearch'),
+    url(r'^git/$', 'src.views.gitSearch', name='gitsearch'),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
