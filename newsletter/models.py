@@ -1,5 +1,5 @@
 from django.db import models
-import urllib2, json, httplib2, simplejson, six
+import urllib2, json
 
 
 
